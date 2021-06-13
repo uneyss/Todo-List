@@ -16,14 +16,41 @@ function eventListeners(){ // All event listeners
 
 
 function addTodo(e){
-    const newTodo = todoInput.value.trim() // We deleted the leading and trailing spaces  
-    addTodoToUI(newTodo)
+    const newTodo = todoInput.value.trim() // We deleted the leading and trailing spaces
+    
+
+    if (newTodo === ""){
+        showAlert("danger", "Lütfen Bir Todo Girin...")
+    }
+    else{
+        addTodoToUI(newTodo)
+        showAlert("success","Todo Başarıyla Eklendi...")
+    }
     e.preventDefault()
 }
 
+function showAlert(type,message){
+    const alert = document.createElement("div")
+
+    alert.className = `alert alert-${type}`
+    alert.textContent = message
+
+    firstCardBody.appendChild(alert)
+
+    // setTimeout
+    setTimeout(() => {
+        alert.remove()
+    }, 1000); 
+}
+
+
+
+
 function addTodoToUI(newTodo){ // It will add the String value to the UI as a List item.
+
    // Creating List Item
    const listItem = document.createElement("li")
+
    // Creating Links
    const link = document.createElement("a")
    link.hrek = "#"
@@ -33,7 +60,6 @@ function addTodoToUI(newTodo){ // It will add the String value to the UI as a Li
    listItem.className = "list-group-item d-flex justify-content-between"
 
    // Add Text Node
-
    listItem.appendChild(document.createTextNode(newTodo))
    listItem.appendChild(link)
 
@@ -41,4 +67,3 @@ function addTodoToUI(newTodo){ // It will add the String value to the UI as a Li
    todoList.appendChild(listItem)
    todoInput.value = ""
 }
-console.log('selam')

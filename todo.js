@@ -18,9 +18,22 @@ function eventListeners(){ // All event listeners
 function deleteTodo(e){
     if(e.target.className === "fa fa-remove"){
         e.target.parentElement.parentElement.remove()
+        deleteTodoFromStorage(e.target.parentElement.parentElement.textContent)
         showAlert("success", "Todo Başarıyla Silindi")
     }
         
+}
+
+function deleteTodoFromStorage(deleteTodo){
+    let todos = getTodosFromStorage()
+    
+    todos.forEach(function(todo,index){
+        if(todo === deleteTodo){
+            todos.splice(index,1) // We can delete the value from the array.
+        }
+    }) 
+
+    localStorage.setItem("todos", JSON.stringify(todos))
 }
 
 

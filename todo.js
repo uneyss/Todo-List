@@ -165,19 +165,21 @@ function addTodoToUI(newTodo){ // It will add the String value to the UI as a Li
    const link = document.createElement("a")
    link.href = "#"
    link.className = "delete-item"
-   link.innerHTML = "<i class = 'fa fa-remove'style='margin-left: 300px;'  ></i>"
+   link.innerHTML = "<i class = 'fa fa-remove' ></i> <i class='fa fa-check' aria-hidden='true'' style='margin-left: 10px;' ></i>"
 
-   const link2 = document.createElement("a")
+/*    const link2 = document.createElement("a")
    link2.href = "#"
    link2.className = "#"
-   link2.innerHTML = "<i class='fa fa-check' aria-hidden='true''></i>"
+   link2.style = "display: flex;"
+   link2.innerHTML = "<i class='fa fa-check' aria-hidden='true''></i>" */
 
    listItem.className = "list-group-item d-flex justify-content-between"
+   listItem.style = "align-items: center;"
 
    // Add Text Node
    listItem.appendChild(document.createTextNode(newTodo))
    listItem.appendChild(link)
-   listItem.appendChild(link2)
+//    listItem.appendChild(link2)
 
    // Add ListItem to Todo List
    todoList.appendChild(listItem)

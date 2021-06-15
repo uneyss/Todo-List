@@ -9,7 +9,9 @@
 <hr>
 <img width="865" alt="Ekran Resmi 2021-06-15 11 27 48" src="https://user-images.githubusercontent.com/73793862/122020240-471ced80-cdcd-11eb-886c-89be59df1e9b.png">
 <hr>
-![Todo-List-LocalStorage](https://user-images.githubusercontent.com/73793862/122025205-d75d3180-cdd1-11eb-8342-96feb4f2dea5.PNG)
+<img width="865" alt="Ekran Resmi 2021-06-15 11 27 48" src="https://user-images.githubusercontent.com/73793862/122025282-eba12e80-cdd1-11eb-9df1-bf3eb1c3127e.PNG">
+
+
 
 
 <h1>Todo List</h1>

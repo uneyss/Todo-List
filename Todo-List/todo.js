@@ -104,15 +104,15 @@ function addTodo(e){
     })
     
     if (newTodo === ""){
-        showAlert("danger", "Lütfen Bir Todo Girin...")
+        showAlert("danger", "Please Enter a Todo...")
     }
     else if (isThere){
-        showAlert("danger", "Aynısını Daha Önce Eklediniz...")
+        showAlert("danger", "You Added the Same Before...")
     }
     else{
         addTodoToUI(newTodo)
         addTodoToStorage(newTodo)
-        showAlert("success","Todo Başarıyla Eklendi...")
+        showAlert("success","Todo Added Successfully...")
     }
 
 

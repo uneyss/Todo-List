@@ -12,5 +12,7 @@
 <h1>Todo List</h1>
   <h2>Features</h2>
     <ul>
-  <li>Add todos</li>
+  <li>Add todos - Delete todos</li>
+  <li>Filtering Todos</li>
+  <li>Adding and deleting added and deleted todos to Local Storage</li>
    </ul>

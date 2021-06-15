@@ -22,7 +22,7 @@ function eventListeners(){ // All event listeners
 
 function checkTodo(e){
     if(e.target.className === "fa fa-check"){
-        showAlert("success", "Todo Başarıyla Tamamlandı")
+        showAlert("success", "Todo Completed Successfully")
         e.target.parentElement.parentElement.setAttribute("style", "background: green")
         // e.target.parentElement.parentElement.setAttribute("style", "text-decoration: line-through;")
     } 
@@ -31,7 +31,7 @@ function checkTodo(e){
 
 function clearAllTodos(e){
     
-    if(confirm("Tümünü Silmek İstediğinize Emin Misiniz")){
+    if(confirm("Are you sure you want to delete all")){
         // Arayüzden todoları temizleme
         while(todoList.firstElementChild != null){
             todoList.removeChild(todoList.firstElementChild)
@@ -64,7 +64,7 @@ function deleteTodo(e){
     if(e.target.className === "fa fa-remove"){
         e.target.parentElement.parentElement.remove()
         deleteTodoFromStorage(e.target.parentElement.parentElement.textContent)
-        showAlert("success", "Todo Başarıyla Silindi")
+        showAlert("success", "Todo Successfully Deleted")
     }
         
 }
